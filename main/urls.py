@@ -9,4 +9,5 @@ urlpatterns = [
     path('view_users', view_users, name="view_users"),
     path('edit_user/<str:username>', edit_user, name='edit_user'),
     path('user/change_password', change_password, name="change_password")
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.STATIC_ROOT)}),)`
+]
