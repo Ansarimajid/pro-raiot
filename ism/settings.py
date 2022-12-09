@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-7&--0=g5vvs=i*c#^ofyhua!i6j68if2ftb0mi-abbp3#6&yo_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["specified.ml","portfolio-production-1831.up.railway.app"]
 
 
 # Application definition
@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'ism.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -109,18 +109,18 @@ USE_TZ = True
 ##### For Localhost #####
 
 STATICFILES_DIRS = [BASE_DIR / 'static',]
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-# STATIC_ROOT = BASE_DIR / 'static'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
+# # STATIC_ROOT = BASE_DIR / 'static'
 
 ##### For Server #######
 
-# MEDIA_ROOT = '/home/ism/ism/media'
-# MEDIA_URL = '/media/'
-# STATIC_ROOT = '/home/ism/ism/static'
-# STATIC_URL = '/static/'
+MEDIA_ROOT = '/home/ism/ism/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/ism/ism/static'
+STATIC_URL = '/static/'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
