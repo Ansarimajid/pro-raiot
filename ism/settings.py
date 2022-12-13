@@ -106,21 +106,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-##### For Localhost #####
-
-STATICFILES_DIRS = [BASE_DIR / 'static',]
-# STATIC_URL = '/static/'
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = BASE_DIR / 'media'
-# # STATIC_ROOT = BASE_DIR / 'static'
-
-##### For Server #######
-
-MEDIA_ROOT = '/home/ism/ism/media'
-MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/ism/ism/static'
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = BASE_DIR / 'staic'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
